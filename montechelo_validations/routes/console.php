@@ -20,5 +20,6 @@ Artisan::command('validations:create-default-values', function () {
     Validation::firstOrCreate(['field_name' => 'phone'], ['data_type' => 'number','min' => 10, 'max' => 10]);
     Validation::firstOrCreate(['field_name' => 'identification'], ['required' => true, 'max' => 12]);
     Validation::firstOrCreate(['field_name' => 'date_of_birth'], ['data_type' => 'date', 'min' => 1922, 'max' => 2005]);
+    User::firstOrCreate(['example@example.com']);
     $this->line('data created successfully');
 })->purpose('create defaul values for validation table');
